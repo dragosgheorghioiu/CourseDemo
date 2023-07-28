@@ -1,0 +1,67 @@
+[gd_scene load_steps=9 format=3 uid="uid://cdyuiwnwd2b5e"]
+
+[ext_resource type="Script" path="res://bg-para.gd" id="1_guu44"]
+[ext_resource type="Texture2D" uid="uid://cqj8ncpsaqeo7" path="res://Sunny-land-files/Sunny-land-assets-files/PNG/environment/layers/back.png" id="2_r0abs"]
+[ext_resource type="Texture2D" uid="uid://dco101pjlw77c" path="res://Sunny-land-files/Sunny-land-assets-files/PNG/environment/layers/middle.png" id="3_8nidw"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3vfc4"]
+load_path = "res://.godot/imported/middle.png-c781efda9649bc6a6e04e412bc65a889.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rxrfd"]
+load_path = "res://.godot/imported/middle.png-c781efda9649bc6a6e04e412bc65a889.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c6ixv"]
+load_path = "res://.godot/imported/middle.png-c781efda9649bc6a6e04e412bc65a889.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6vajs"]
+load_path = "res://.godot/imported/middle.png-c781efda9649bc6a6e04e412bc65a889.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qgvpt"]
+load_path = "res://.godot/imported/middle.png-c781efda9649bc6a6e04e412bc65a889.ctex"
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+script = ExtResource("1_guu44")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+position = Vector2(0, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Back" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(576, 322)
+scale = Vector2(3, 2.69167)
+texture = ExtResource("2_r0abs")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+position = Vector2(0, 1)
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(1176, 0)
+
+[node name="Middle" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(85, 468)
+texture = ExtResource("3_8nidw")
+
+[node name="Middle2" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(254, 466)
+texture = SubResource("CompressedTexture2D_3vfc4")
+
+[node name="Middle3" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(416, 472)
+texture = SubResource("CompressedTexture2D_rxrfd")
+
+[node name="Middle4" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(589, 466)
+texture = SubResource("CompressedTexture2D_c6ixv")
+
+[node name="Middle5" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(759, 470)
+texture = SubResource("CompressedTexture2D_6vajs")
+
+[node name="Middle6" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(923, 464)
+scale = Vector2(0.965909, 0.994565)
+texture = SubResource("CompressedTexture2D_qgvpt")
+
+[node name="Middle7" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(1087, 465.5)
+scale = Vector2(1.01136, 0.986413)
+texture = ExtResource("3_8nidw")

@@ -1,0 +1,80 @@
+[gd_scene load_steps=16 format=3 uid="uid://c0nsuo07r4ccm"]
+
+[ext_resource type="Script" path="res://Possum.gd" id="1_8t7tj"]
+[ext_resource type="Texture2D" uid="uid://jwpitvclhe5t" path="res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/enemy-death/enemy-death-1.png" id="2_onkm7"]
+[ext_resource type="Texture2D" uid="uid://dx6887q4ug263" path="res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/enemy-death/enemy-death-2.png" id="3_wclpc"]
+[ext_resource type="Texture2D" uid="uid://c0mf6jeo6ytf4" path="res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/enemy-death/enemy-death-3.png" id="4_clxgr"]
+[ext_resource type="Texture2D" uid="uid://dxgf7si3yhbaj" path="res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/enemy-death/enemy-death-4.png" id="5_ehfmc"]
+[ext_resource type="Texture2D" uid="uid://d1u0ndkdebc3i" path="res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/enemy-death/enemy-death-5.png" id="6_lnr1f"]
+[ext_resource type="Texture2D" uid="uid://vxl84weneb3a" path="res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/enemy-death/enemy-death-6.png" id="7_a4amr"]
+[ext_resource type="Texture2D" uid="uid://ywdp46w5jfad" path="res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/opossum/opossum-1.png" id="8_vdo4l"]
+[ext_resource type="Texture2D" uid="uid://c3cw4lekdc1ah" path="res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/opossum/opossum-2.png" id="9_yolh7"]
+[ext_resource type="Texture2D" uid="uid://be1seobwh3qfd" path="res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/opossum/opossum-3.png" id="10_oysld"]
+[ext_resource type="Texture2D" uid="uid://bio13q0pmcnsp" path="res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/opossum/opossum-4.png" id="11_0ah0b"]
+[ext_resource type="Texture2D" uid="uid://db5fjwpxv67ob" path="res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/opossum/opossum-5.png" id="12_7am43"]
+[ext_resource type="Texture2D" uid="uid://cwu13s23gkygs" path="res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/opossum/opossum-6.png" id="13_t44nr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sk16j"]
+size = Vector2(26, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i61xl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_onkm7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wclpc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_clxgr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ehfmc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_lnr1f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_a4amr")
+}],
+"loop": true,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_vdo4l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_yolh7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_oysld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_0ah0b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_7am43")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_t44nr")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="Possum" type="CharacterBody2D"]
+script = ExtResource("1_8t7tj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, 3)
+shape = SubResource("RectangleShape2D_sk16j")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_i61xl")
+animation = &"death"
+frame = 1
+frame_progress = 0.353728
